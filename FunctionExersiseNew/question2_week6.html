@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Question 2</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var a = [1,2,3,4,5,6,7,8,9,10];
+			var key = +4;
+			function deleteA(key,a) {
+			for (var i = 0; i < a.length; i++) {
+				if ( +a[i] == key) {
+					a.splice(a[i],1);
+				}
+			}	
+			}
+            deleteA(key,a);
+            console.log(a);
+		</script>
+
+	</body>
+	</html>
