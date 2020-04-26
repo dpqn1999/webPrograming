@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Question1</title>
+
+	</head>
+	<body>
+		<script type="text/javascript">
+			function product(name,id,img,price,dispri) {
+				return {
+					name : name,
+					id : id,
+					img : img,
+					price : price,
+					dispri : dispri,
+					}
+				}
+			
+
+			var product1 = product("Cà Phê cùng Tony","1001","https://cdn0.fahasa.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/c/a/ca_phe_cung_tony_tai_ban_2017_1_2018_11_16_11_02_35.JPG","80k","20K");
+			var product2 = product("Trên Đường băng","1002","https://salt.tikicdn.com/cache/550x550/ts/product/61/87/8a/082a07cec3232115e2b22636fd71593c.jpg","80k","20K");
+			var product3 = product("Bạn đắc giá bao nhiêu","1003","https://lh3.googleusercontent.com/proxy/y7yejn-lwqbjJkuSjKtG3NohFLMA6SPIfvujqX_Vd8wiSMCDHqAeLMzdpSFoftTdgQSikM6nnLwuECHA56Al3nOQdICziCAHcYJwzzx3115DIzKI1VLtw6-dbtCXBbhjXaeuxEf1LMl9n8tbBvMmYVIEnZk4sLDTzDsocW6Lnh8XvO4Wj0yVzfLdxq34J1UBeSouQr4dTDLMADs0VtMZFulTfrRAMKwydRV6oDRoa4ObMharI6PIeLx-GRu3QXX4TjPNmOT4J7d6LISE_wnLpVcLquFAZnlCX5LT8QCXzAZu4zc96dA","90k","20K");
+			var product4 = product("Đắc nhân tâm","1004","https://cdn0.fahasa.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/9/5/9558a365adde6688d4c71a200d78310c.jpg","60k","20K");
+         
+			var arrPro = new Array();
+			arrPro[0]=product1;
+			arrPro[1]=product2;
+			arrPro[2]=product3;
+			arrPro[3]=product4;
+			var id1 = "1002";
+
+			 function deletePro(id1) {
+
+			 	for (var i = 0; i < arrPro.length; i++) {
+			 		if ((arrPro[i].id)==(id1) ) {
+                       arrPro.splice(i,1);
+                       return;
+			 		}
+			 	  }
+			 	}
+			 deletePro(id1);
+			 function showName(arr) {
+			 	for (var i = 0; i < arrPro.length; i++) {
+			 		console.log(arrPro[i].name);
+			 	}
+			 }
+			 showName(arrPro);
+			 
+			
+		</script>
+
+	</body>
+</html>
