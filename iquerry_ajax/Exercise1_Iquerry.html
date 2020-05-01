@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Exersise 1 Iquerry</title>
+<style>
+    form{
+        margin: 20px 0;
+    }
+    form input, button{
+        padding: 5px;
+    }
+    table{
+        width: 100%;
+        margin-bottom: 20px;
+		border-collapse: collapse;
+    }
+    table, th, td{
+        border: 1px solid #cdcdcd;
+    }
+    table th, table td{
+        padding: 10px;
+        text-align: left;
+    }
+    h3 {
+        border-bottom: 5px solid orange;
+        display: inline-block;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".add-row").click(function(){
+            var First = $("#name").val();
+            var Last = $("#email").val();
+            var markup = "<tr><th></th><td>" + First + "</td><td>" + Last + "</td>" +" <td><a href='javascript:void(0)' class='delete-row'>Xóa</a></td>"+ "</tr>";
+            $("table tbody").append(markup);
+            $("input").val('');
+        });
+        
+       ;
+        $(document).on('click', ".delete-row", function () {
+         $(this).parents("tr").remove();
+         
+        })
+        
+    });    
+</script>
+</head>
+<body>
+    <h3>NAME LIST</h3>
+   
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>First</th>
+                <th>Last</th>
+                <th>Function</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td><a href="javascript:void(0)" class="delete-row">Xóa</a></td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>Jacob</td>
+                <td>Thorton</td>
+                <td><a href="javascript:void(0)" class="delete-row">Xóa</a></td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>Larry</td>
+                <td>The Bird</td>
+                <td><a href="javascript:void(0)" class="delete-row">Xóa</a></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th></th>
+            <td><input type="text" id="name" ></td>
+            <td><input type="text" id="email" ></td>
+            <td><a href="javascript:void(0)" class="add-row">Thêm</a></td>
+        </tfoot>
+    </table>
+    
+    
+</body> 
+</html>                            
