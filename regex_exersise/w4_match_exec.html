@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		let academyRegex = /telerik\s(software\s|algo\s|kids\s)?academy/gi;
+		let text = 'George is studying javascript at telerik academy, while Jimmy goes to  telerik kids academy';
+		let isMatch = academyRegex.test(text);
+		
+		let matches = text.match(academyRegex);
+		   for (var i = 0; i < matches.length; i++) {
+		   	console.log(matches[i]);
+		   }
+		
+		
+		while(currentMatch = academyRegex.exec(text)) {
+               console.log(currentMatch);
+		}
+
+
+	</script>
+		
+
+</body>
+</html>
