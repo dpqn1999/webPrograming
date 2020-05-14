@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exersise 4</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">	
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style type="text/css">
+			a {
+				color: white;
+				text-decoration: none;
+				font-family: open sans;
+				display: block;
+				padding: 10px 20px;
+
+
+			}
+			a:hover {
+				color: white;
+				text-decoration: none;
+				background-color: #f4a024;
+
+
+			}
+			
+			.firstsubItem {
+				position: relative;
+				list-style-type: none;
+				padding-right:10px;
+				z-index: 100;
+
+			}
+			.subMenu ul {
+				margin: 0;
+				padding: 0;
+			}
+
+			li {
+				text-align: -webkit-match-parent;
+			}
+
+			.blockitem {
+				display: inline-block;
+			}
+			.subMenu {
+				display: none;
+				margin-right: 6px;
+
+			}
+			.menu {
+				background-color: #294A70;
+				border-bottom: 5px solid #f4a024;
+				float: left;
+				width: 100%;
+				
+				
+			}
+			
+			.blockitem:first-child {
+				border-left: 1px solid white;
+			}
+			.blockitem {
+				border-right: 1px solid white;
+				margin-bottom: -12px;
+			}
+			.container {
+					
+    			margin: 0 auto;
+    			padding-left: 1px;
+    			padding-right: 1px;
+			}
+			.Menuitem:hover .subMenu {
+				display: block;
+				position: absolute;
+				background-color: #294A70;
+			}
+			.Menuitem:hover .firstsubItem {
+				border-bottom: 1px solid white;
+			}
+			.icon::after {
+				content: "\f107";
+    			font-family: FontAwesome;
+				color: white;
+				padding-left: 2px;
+				position: absolute;
+			}
+			.icon {
+				padding-right: 24px;
+			}
+			.firstsubItem{
+				
+			}
+
+			
+
+		</style>
+
+	</head>
+	<body>
+		<div class="menu">
+			<div class="container">
+				<ul>
+					<li class="blockitem">
+						<div class="Menuitem">
+							<a href="">Trang Chủ</a>
+						</div>
+					</li>
+					<li class="blockitem">
+						<div class="Menuitem">
+							<a href="" class="icon">Khoa CNTT</a>
+							<div class="subMenu " id="icon">
+								<ul>
+						    		<li class="firstsubItem"><a href="">Giới Thiệu</a></li>
+						    		<li class="firstsubItem"><a href="">Lời Ngỏ Từ Trưởng Khoa</a></li>
+						    		<li class="firstsubItem"><a href="">Giảng Viên</a></li>
+						    		<li class="firstsubItem"><a href="">Hình Ảnh CIT</a></li>
+						    		<li class="firstsubItem"><a href="">Video</a></li>
+						    	</ul>
+							</div>
+						</div>
+					</li>
+					<li class="blockitem">
+						<div class="Menuitem">
+							<a href="" class="icon">Chương Trình Đào Tạo</a>
+							<div class="subMenu " id="icon">
+								<ul>
+						    		<li class="firstsubItem"><a href="">Ngành Kỹ Thuật Phần Mềm</a></li>
+						    		<li class="firstsubItem"><a href="">Ngành Mạng Máy Tính Và Truyền Thông Dữ Liệu</a></li>
+						    		<li class="firstsubItem"><a href="">Ngành Khoa Học Máy Tính</a></li>
+						    	</ul>
+							</div>
+						</div>
+						
+					</li>
+					<li class="blockitem">
+						<div class="Menuitem">
+							<a href="">Tin Tức</a>
+						</div>
+					</li>
+					<li class="blockitem">
+						<div class="Menuitem">
+							<a href="">Sự Kiện</a>
+						</div>
+						
+					</li>
+					<li class="blockitem">
+						<div class="Menuitem">
+							<a href="">Nghiên Cứu Khoa Học</a>
+						</div>
+						
+					</li>
+
+					<li class="blockitem">
+						<div class="Menuitem">
+							<a href="" class="icon">Giáo Vụ</a>
+							<div class="subMenu " id="icon">
+								<ul>
+						    		<li class="firstsubItem"><a href="">Biểu Mẫu</a></li>
+						    		<li class="firstsubItem"><a href="">Thông Báo Học Vụ</a></li>
+						    	</ul>
+							</div>
+						</div>
+					</li>
+					<li class="blockitem">
+						<div class="Menuitem">
+							<a href="">Liên hệ</a>
+						</div>
+						
+					</li>
+
+				</ul>
+				
+			</div>
+			
+		</div>
+
+	</body>
+</html>
