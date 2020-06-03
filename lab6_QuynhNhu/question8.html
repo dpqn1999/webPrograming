@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Question 8</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var number = 12345 ; 
+			function diverse (number) {
+				
+				var str = number.toString();
+				var result = "";
+				for (var i = str.length-1; i >= 0; i--) {
+					result += str.charAt(i); 
+					
+				}
+				return result;
+
+			}
+			console.log(diverse(number));
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Question4</title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			var str1 = 'I like playing football and swimming '
+			var str2 = "swimming,football,like";
+			 function replaceString(str1 , str2) {
+			 	var tempstr1 = str1.split(" ");
+			 	var tempstr2 = str2.split(",");
+			 	var temp = "";
+			 	var count=0;
+			 	for (var i=0; i <  tempstr2.length ; i++) {
+			 		for (var j=0; j < tempstr1.length; j++) {
+			 			if(tempstr2[i]==tempstr1[j]) {
+			 				temp = tempstr2[i].toUpperCase();
+			 				str1 = str1.replace(tempstr1[j],temp);
+			 				
+			 				
+			 			}
+			 		}
+			 	}
+			 	return str1;
+			 }
+			 console.log(replaceString(str1,str2));
+
+		
+
+		</script>
+
+	</body>
+</html>
