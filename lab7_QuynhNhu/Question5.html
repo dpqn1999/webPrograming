@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 5</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style type="text/css">
+		.menu a {
+			padding: 10px;
+			color: white;
+			display: inline-block;
+			
+		}
+		.menu{
+			background-color: black;
+		}
+		
+		.menu .icon {
+			color: white;
+			display: none;
+		}
+		.firsta {
+			background-color: green;
+			color: white;
+		}
+
+		@media screen and (max-width: 600px) {
+			.menu {
+				position: relative;
+			}
+		  
+		     .menu .icon {
+		     	display: block !important;
+		     	color: white;
+		     	position: absolute;
+		     	top: 0;
+		     	right: 0;
+		     }
+		     .menu a:not(:first-child) {
+		     	display: none;
+		     }
+		     
+		     .menu.responsive a {
+		     	display: block;
+		     }
+		}
+	</style>
+</head>
+<body>
+	<div class="menu">
+		<a href="" class="firsta" href="javascript:void(0);">Menu</a>
+		<a href="">News</a>
+		<a href="">Contact</a>
+		<a href="">About</a>
+		<a href="" class="icon" href="javascript:void(0);"><i class="fa fa-bars" aria-hidden="true"></i></a>
+	</div>
+	<script type="text/javascript">
+		
+		$().ready(function(){
+			$(".menu").click(function(){
+			$(this).toggleClass("responsive");
+
+			});
+
+		});
+	</script>
+
+</body>
+</html>

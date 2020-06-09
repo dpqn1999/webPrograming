@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 5</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<style type="text/css">
+		.wrap {
+			background-color: red;
+			color: white;
+			padding: 20px 15px;
+		}
+		.title {
+			text-align: center;
+			font-size: 30px;
+		}
+		#input {
+			width: 1200px;
+		}
+		li {
+			background-color: #f4f4f4;
+			list-style-type: none;
+			margin-bottom: 5px;
+			position: relative;
+
+		}
+		.delete {
+			position: absolute;
+			top: 0;
+			right: 0;
+
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="title">My To Do List</div>
+		<div >
+			<input type="text" name="" placeholder="title..." id="input">
+			<button id="button">Add</button>
+		</div>
+		
+	</div>
+	
+	<div>
+		<ul class="wrap2">
+			
+		</ul>
+	</div>
+
+	<script type="text/javascript">
+				$("#button").click(function(){
+					let u = $("#input").val();
+					let str = "<li>" + u + `<span class="delete">x</span>` + "</li>" ;
+					$("ul").append(str);
+		            $("#input").val('');
+				});
+				$(".wrap2").on("click",".delete",function(){
+					$(this).parent().remove();
+				});
+
+			
+	</script>
+
+</body>
+</html>
