@@ -1,0 +1,513 @@
+			a {
+				text-decoration: none;
+				color: unset;
+			}
+			#logoVas {
+				width: 55%;
+				height: auto;
+			}
+			a:hover {
+				text-decoration: none;
+				color: unset;
+			}
+			div {
+				font-family: barlow;
+			}
+			.wrapheader1 {
+				margin : 0px auto;
+				width: 85%;
+				padding: 20px 0px 10px;
+
+			}
+		    .wrapplace {
+		    	background-color: #f4f4f4;
+		    	text-align: center;
+		    	width: 120px;
+		    	
+		    	padding: 5px;
+
+		    }
+		    #chooseplace {
+		    	font-size: 10px;
+		    }
+		    .hcm{
+		    	font-size: 12px;
+		    	font-weight: bold;
+		    }
+		    #hcm::after {
+		    	 content: '\23F7';
+		    }
+		    .findproduct {
+		    	width: 100%;
+    			padding: 7px 30px 7px 50px;
+		    	border-radius: 30px;
+		    	border:0;
+		    	background-color: #f4f4f4;
+		    	background-image: url('https://www.vascara.com/templates/current/img3_0/icon/search-v1.png');
+		    	background-size: 16px 16px;
+		    	background-repeat: no-repeat;
+				background-position: 20px;
+				margin-left: 15px;
+		    }
+		    .sign {
+		    	margin-right: 5px;
+		    	font-size: 14px;
+		    }
+		    #tagstylehover:hover {
+		    	color: red;
+		    	transition: 0.3s;
+		    }
+		    .shoppingicon {
+		    	width: 29px;
+		    	
+		    }
+		    .count {
+		    	color: red;
+		    	font-weight: bold;
+		    	font-size: 15px;
+		    }
+		    .wrapsign {
+		    	padding-left: 30px;
+		    }
+		    .item {
+		    	list-style-type: none;
+		    	display: inline-block;
+		    	font-size: 14px;
+		    	padding: 12px 43px 5px 0px;
+		    	z-index: 999;
+		    }
+		    
+		    .wrapheader2 {
+		    	margin : 0px auto;
+				width: 89%;
+				display: block ;
+		    }
+		    .dropdown {
+		    	display: none;
+		    	position: absolute;
+		    	width: 240px;
+		    	background-color: white;
+		    	list-style: none;
+		    	padding-left: 16px;
+		    	
+		    }
+		    .subitem {
+		    	list-style-type: none;
+		    	list-style: none;
+		    	margin:0;
+		    	margin-bottom: : 30px;
+		    	margin-top: 30px;
+		    	font-size: 15px;
+
+		    }
+		    .item:hover .dropdown  {
+		    	display: block ;
+		    	
+
+		    }
+		   .item {
+		   		position: relative;
+		   	}
+		   	#tagstylehover2:hover {
+		   		color: red;
+
+		   		transition: 0.3s;
+		   		display: inline-block;
+		   		outline-offset: -5px;
+
+		   	}
+		   	.dropdown li:last-child {
+		   		margin-bottom: 15px;
+		   	}
+		   	
+		   	.carousel-indicators li {
+		   		
+		   		background-color: white;
+		   		opacity: 1;
+		   		margin: 0px 15px;
+		   		display: inline-block;
+		   		width: 10px;
+		   		height: 10px;
+		   		margin: 0px 5px;
+		   	    border : none;
+		   		border-radius: 10px;
+		   	}
+		   	.carousel-indicators li.active {
+		   		background-color: #f15b67;
+		   		margin: 0px 5px;
+    			width: 10px;
+    			height: 10px;
+    			opacity: 1;
+		   	}
+		   	.title1 {
+		   		text-align: center;
+		   		font-size: 28px;
+		   		color: #f15b67;
+		   		font-family: nunito sans;
+		   		padding: 35px 0px;
+		   	}
+		   	.gifimg {
+		   		width:80%;
+		   		height: auto;
+		   		margin-right: auto;
+		   		margin-left: auto;
+		   		display: block;
+		   	}
+		   	.title2 {
+		   		text-align: center;
+		   		font-size: 28px;
+		   		color: #f15b67;
+		   		font-family: nunito sans;
+		   		padding: 35px 0px;
+		   	}
+		   	.viewmore {
+		   		position: absolute;
+		   		color: grey;
+		   		font-size: 15px;
+		   		margin-left: 310px;
+		   		padding-top: 8px;
+		   	}
+		   	.viewmore::after {
+		   		border: solid grey;
+			    border-width: 0 2px 2px 0;
+			    display: inline-block;
+			    padding: 3px;
+			    transform: rotate(-45deg);
+			    -webkit-transform: rotate(-45deg);
+			    content: '';
+			    margin-left: 4px;
+			    margin-bottom: 2px;
+
+		   	}
+		   	.listproduct {
+		   		margin : 0px auto;
+				width: 85%;
+				font-family: nunito sans;
+				font-size: 14px;
+				margin-bottom: 50px;
+		   	}
+		   	.imgproduct {
+		   		width: 100%;
+		   		height: auto;
+
+		   	}
+		   	.nameproduct {
+		   		font-size: 14px;
+		   		font-family: nunito sans;
+		   	}
+		   	.imgproduct:hover {
+		   		border:1px solid #f15b67;
+		   		transition: 0.1s;
+		   	}
+		   	.wrapprice {
+		   		padding: 14px 0px 5px 0px;
+		   	}
+		   	.wrapproduct {
+		   		margin: 10px 3px 0px 3px;
+		   		font-size: 14px;
+		   		
+		   	}
+
+		   	.currency {
+		   		text-decoration: underline;
+		   	}
+		   	.newicon {
+		   		margin-top: 10px;
+		   		height: 21px;
+		   	}
+
+		   	.price {
+		   		color: #f15b67;
+		   	}
+		   	.discount {
+		   		padding-left: 10px;
+		   		text-decoration: line-through;
+		   	}
+		   	.percentagediscount {
+		   		background-color: #F15B67;
+		   		width: 50px;
+		   		text-align: center;
+		   		color: white;
+		   		bottom: 0;
+		   	}
+		   	.pricePro span:nth-child(2) {
+		   		color:#f15b67;
+		   	}
+		   	.slideproduct {
+		   		margin : 0px auto;
+				width: 86%;
+		   	}
+		   	
+		   	.avatar {
+		   		width: 100%;
+		   		height: auto;
+		   	}
+		   	.avatar:hover {
+		   		border:1px solid red;
+		   		transition: 0.1s;
+		   	}
+		   	.slideproduct {
+				width: 85%;
+				margin : 0px auto;
+			}
+			
+			.iconcontrol {
+				width: 8%;
+				vertical-align: middle;
+				margin-bottom: 85px;
+				margin-right: 3px;
+
+			}
+			.wrapproduct2 {
+				padding: 5px 15px 0px 0px;
+			}
+			.slideproduct .wrapproduct2:last-child {
+				padding-right: 0px;
+			}
+			footer {
+				padding-top: 40px;
+			}
+			.wrapfooter1 {
+				width: 85%;
+				margin : 0px auto;
+				padding: 35px 0px;
+
+			}
+			.mainfooter{
+				background-color: #f4f4f4;
+			}
+		   	.titlefooter {
+		   		font-size: 15px;
+		   		margin-bottom: 15px;
+		   		font-weight: bold;
+		   	}
+		   	.itemfooter {
+		   		padding: 8px 0px;
+		   	}
+		   	.iconbct {
+		   		margin-top: 130px;
+		   	}
+		   	#lasttitlefooter{
+		   		margin-bottom: 8px;
+		   	}
+		   	.iconsocial {
+		   		margin-right: 10px;
+		   	}
+		   	.wrapsocial {
+		   		padding-bottom: 30px;
+		   	}
+		   	.pricePro {
+		   		padding-top: 15px;
+		   		font-size: 15px;
+		   	}
+		   	#locate::before {
+		   		background-image: url(https://www.vascara.com/templates/current/img3_0/icon/address.png);
+		   		content: '  ';
+		   		background-repeat: no-repeat;
+		   		width: 25px;
+				height: 30px;
+				position: absolute;
+				left: 0;
+				display: inline-block;
+		   	}
+		   	.location {
+		   		margin-top: 60px;
+		   		color: #f15b67;
+		   		font-size: 15px;
+		   		font-weight: bold;
+		   		padding-left: 13px;
+
+		   	}
+		   	#phone::before {
+		   		background-image: url(https://www.vascara.com/templates/current/img3_0/icon/hotline.png);
+		   		content: '';
+		   		background-repeat: no-repeat;
+		   		width: 50px;
+    			height: 50px;
+				position: absolute;
+				left: 0;
+				display: inline-block;
+				background-size: 40%;
+				
+
+		   	}
+		   	.notbold {
+		   		font-weight: normal;
+		   		color: black;
+
+		   	}
+		   	#wrapcontact {
+		   		padding-top: 35px;
+		   		padding-left: 16px;
+		   		width: 100%;
+		   		height: auto;
+		   	}
+		   	.wrapfooter2 {
+		   		text-align: center;
+		   		padding: 10px 0px;
+		   	}
+
+
+
+			
+			.menumobile li {
+				list-style-type: none;
+				margin-left: -25px;
+
+
+			}
+			.overlay{
+				z-index: 999;
+				height: 100%;
+				width: 0%;
+				position: fixed;
+				top: 0;
+				right: 0;
+				background-color: white;
+				overflow-x: hidden;
+
+
+
+			}
+
+			.overlay-content a {
+				margin: 8px;
+				font-size: 13px;
+				color: black;
+				display: inline-block;
+				text-decoration: none;
+
+			}
+			.inforProduct {
+				font-size: 14px;
+				font-family: nunito sans;
+			}
+			.overlay .closebtn {
+				font-size: 30px;
+				padding-left: 10px;
+			}
+			.menuicon {
+				display: none;
+			}
+			.addbutton {
+				float: right;
+				padding-right: 8px;
+
+			}
+			.addbutton a {
+				
+
+				
+			}
+			.locationnobile {
+				display: none;
+			}
+			.menumobile {
+				margin-top: 5px;
+			} 
+			.menumobile li {
+				margin-top: 14px;
+			}
+			.avartarmobile {
+				width: 32px;
+    			height: 32px;
+				display: inline-block;
+				float: right;
+				margin-right: 20px;
+				margin-top: 15px;
+				position: relative;
+				border-radius: 32px;
+				
+			}
+			.slidebar {
+				
+
+			}
+			.menumobile {
+			border-bottom: 1px solid #F15B67;
+			padding-bottom: 15px;
+			}	
+			.signmobile {
+				padding : 10px 0px 10px 15px;
+				font-size: 12px;
+			}	
+
+			@media screen and (max-width: 600px) {
+				.viewmore {
+					display: none;
+				}
+				.wrapproduct {
+					margin-bottom: 20px;
+				}
+
+				.iconbct {
+					display: none;
+
+				}
+				.location {
+					display: none;
+				}
+				.bctmobile {
+					display: block;
+					margin-left: auto;
+					margin-right: auto;
+					padding-left: 60px;
+				}
+				.dropdownmobile {
+					display: none;
+					padding-right: 40px;
+				}
+				.menuicon {
+					display: block;
+					padding-top: -30px;
+					padding: 10px 20px 10px 20px;
+				}
+				.headertop {
+					display: none;
+				}
+				.locationnobile {
+					display: block;
+
+				}
+				#logoVas {
+					width: 30%;
+					padding-left: 15px;
+				}
+				.wrapitemshoppingmobile {
+					float: right;
+
+
+				}
+				#wrapcontact {
+				margin-right: 60px;
+				}
+				.iconsearch {
+					width: 15%;
+					height: auto;
+				}
+				.shoppingicon {
+					width: 20%;
+				}
+				.count {
+					color: red;
+				}
+				.makebold {
+					font-weight: bold;
+				}
+				.changeplacemobile {
+					float: right;
+					text-decoration: underline;
+				}
+				.wrapchangeplacemobile {
+					padding: 10px 15px 10px 15px;
+					background-color: #F4F4F4;
+					margin-top: 13px;
+					left: 0;
+				}
+				.wrapproduct2 {
+					margin-bottom: 30px;
+
+				}
+				.pricePro {
+					font-size: 70%;
+				}
