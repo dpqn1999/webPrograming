@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Question 7</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    	<style type="text/css">
+    		img {
+    			width: 100%;
+    			height: auto;
+    		}
+    		input {
+    			width: 90px;
+    			margin:  10px;
+    		}
+
+    	</style>
+	</head>
+	<body>
+		<div class="container_fluid">
+			<div class="row">
+				<div class="col-md-3">
+					<h5 >Class List</h5>
+					<ul class="DanhSach">
+						
+					</ul>
+					
+				</div>
+				<div class="col-md-9">
+					<p>Edit student information</p>
+					<input type="text" name="id">
+					<input type="text" name="name">
+					<input type="text" name="email">
+					<div class="search">
+						<p>Search Product</p>
+						<input type="text" name="" id="search">
+						<button type="button" id="searchButton">Search</button>
+						
+					</div>
+
+					<div class="add">
+						<p>Add student information</p>
+						<input type="text" name="id" placeholder="code" id="codeProduct">
+						<input type="text" name="name" placeholder="name" id="nameProduct">
+						<input type="text" name="price" placeholder="price" id="priceProduct">
+						<input type="text" name="Quantity" placeholder="Quantity" id="quantityProduct">
+						<input type="text" name="Description" placeholder="Description" id="descriptionProduct">
+						<input type="text" name="Image" placeholder="Image" id="imageProduct">
+						<input type="text" name="CateCode" placeholder="CateCode" id="catecodeProduct">
+
+						
+						<button type="button" class="addbutton">Add</button>
+					</div>
+					
+						<table class="table" id="ListProduct">
+						  <thead>
+						    <tr>
+						       	<th>#</th>
+								<th>Code</th>
+								<th>Name</th>
+								<th>Price</th>
+								<th>Quantity</th>
+								<th>Description</th>
+								<th>Image</th>
+								<th>CateCode</th>
+								<th>Function</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+							   
+						   </tbody>
+					</table>
+					
+					
+				</div>
+				
+				
+			</div>
+			
+		</div>
+		<script type="text/javascript">
+			var Brands;
+			var Products;
+
+			function showProducts() {
+				for (var i = 0; i < Products.length; i++) {
+					$("#ListProduct tbody").append(
+                   		`<tr>
+							<td>${i + 1}</td>
+							<td>${Products[i].Code}</td>
+							<td>${Products[i].Name}</td>
+							<td>${Products[i].Price}</td>
+							<td>${Products[i].Quantity}</td>
+							<td>${Products[i].Description}</td>
+							<td><img src="${Products[i].Image_URL}"></td>
+							<td>${Products[i].CateCode}</td>
+							<td><button type="button" class="delete" id="${Products[i].Code}">Xóa</button></td>
+						</tr>`
+                	); 	
+				}
+			};
+			$(document).ready(function(){
+				$.get(
+					"http://66.42.50.227/data-ajax.php",
+					{
+						 "GetProducts" : "All"
+					}
+					).done(function(data) {
+						Products = JSON.parse(data);
+						Products.sort(function(a,b) {
+							if (a.Name > b.Name) return -1;
+							if (a.Name < b.Name) return 1;
+							return 0;
+						});
+						showProducts();
+					});
+				$.get(
+					"http://66.42.50.227/data-ajax.php",
+					{
+						 "GetProducts" : "Brands"
+					}
+					).done(function(data){
+						Brands = JSON.parse(data);
+						for (var i = 0; i < Brands.length; i++) {
+							$(".DanhSach").append(`<li><a class="${Brands[i].BrandCode}" href="#">${Brands[i].BrandName}</a></li>`);
+						}
+
+					});	
+			});
+			$(".addbutton").click(function(){
+				var tempCode = $("#codeProduct").val();
+				var tempName = $("#nameProduct").val();
+				var tempPrice = $("#priceProduct").val();
+				var tempQuantity = $("#quantityProduct").val();
+				var tempDescription = $("#descriptionProduct").val();
+				var tempImage = $("#imageProduct").val();
+				var tempCatecode = $("#catecodeProduct").val();
+				Products.push({
+					"Code": tempCode,
+				    "Name": tempName,
+				    "Price": tempPrice,
+				    "Quantity": tempQuantity,
+				    "Description": tempDescription,
+				    "Image_URL": tempImage,
+				    "CateCode": tempCatecode
+
+				});
+				$("#ListProduct tbody").html("");
+                $("#codeProduct").val("");
+                $("#imageProduct").val("");
+                $("#quantityProduct").val("");
+                $("#descriptionProduct").val("");
+                $("#catecodeProduct").val("");
+                $("#priceProduct").val("");
+                $("#nameProduct").val("");
+                alert("SUCCESSFUL!");
+                showProducts();
+
+
+
+			});
+			$("#ListProduct").on("click",".delete",function() {
+				var _confirm = confirm("Are you sure");
+				if (_confirm) {
+					var temp = $(this).attr("id");
+					for (var i = 0; i < Products.length; i++) {
+		                    if (Products[i].Code == temp) {
+		                        Products.splice(i, 1);
+		                        break;
+		                    }
+		                }
+		        $("#ListProduct tbody").html("");
+		        showProducts();
+				};
+			});
+			$("#searchButton").click(function() {
+				var _search = $("#search").val();
+				$("#ListProduct tbody").html("");
+				for (var i = 0; i < Products.length; i++) {
+	                    if (Products[i].Name.indexOf(_search) > -1) {
+	                        $("#ListProduct tbody").append(
+	                            `<tr>
+	                            	<td>${i + 1}</td>
+									<td>${Products[i].Code}</td>
+									<td>${Products[i].Name}</td>
+									<td>${Products[i].Price}</td>
+									<td>${Products[i].Quantity}</td>
+									<td>${Products[i].Description}</td>
+									<td><img src="${Products[i].Image_URL}"></td>
+									<td>${Products[i].CateCode}</td>
+									<td><button type="button" class="delete" id="${Products[i].Code}">Xóa</button></td>   
+			                    </tr>`    
+	                        );
+	                    }
+	                }
+
+			});
+			$(".DanhSach").on("click", "li a",function(){
+            		$("#ListProduct tbody").html("");
+            		var _brandCode = $(this).attr("class");
+            		console.log(_brandCode);
+
+            		for (var i = 0; i < Products.length; i++) {
+
+            			if (Products[i].CateCode == _brandCode) {
+
+            				$("#ListProduct tbody").append(
+	                   			`<tr>
+									<td>${i + 1}</td>
+									<td>${Products[i].Code}</td>
+									<td>${Products[i].Name}</td>
+									<td>${Products[i].Price}</td>
+									<td>${Products[i].Quantity}</td>
+									<td>${Products[i].Description}</td>
+									<td><img src="${Products[i].Image_URL}"></td>
+									<td>${Products[i].CateCode}</td>
+									<td><button type="button" class="delete" id="${Products[i].Code}">Xóa</button></td>
+								</tr>`
+                			); 		
+            			};
+            		}
+            	});
+			
+
+		</script>
+
+	</body>
+</html>
